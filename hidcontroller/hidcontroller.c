@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
     hid_read(handle, buf, 33);
     //second packet if needed
     if(argc > 33) {
-        limit -= 32;
+        limit = argc - 32;
         for(int i = 1; i < limit; i++) {
         buf[i] = atoi(argv[i+32]);
     }
